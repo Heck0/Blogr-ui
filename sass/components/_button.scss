@@ -38,6 +38,14 @@ button {
     );
     color: $white;
   }
+
+  &--arrow {
+    background-image: url("./images/icon-arrow-dark.svg");
+    display: inline-block;
+    width: 10px;
+    height: 7px;
+    transition: transform 300ms ease-in-out;
+  }
 }
 
 @include desktop {
@@ -56,6 +64,12 @@ button {
       background-color: $veryLightRed;
       border: none;
       color: $white;
+    }
+    &--arrow {
+      background-image: url("./images/icon-arrow-light.svg");
+      display: inline-block;
+      width: 10px;
+      height: 7px;
     }
   }
 }

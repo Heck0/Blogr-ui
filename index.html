@@ -19,7 +19,7 @@
   <body>
     <header id="header" class="header">
       <div class="header--container container">
-        <a href="#" alt="logo">
+        <a href="#">
           <img src="./images/logo.svg" alt="Logo Blogr" />
         </a>
 
@@ -29,6 +29,7 @@
               <button class="navigation__list--item" type="button">
                 Product
               </button>
+              <span class="btn--arrow"></span>
 
               <div class="products visually-hidden">
                 <ul class="products__list">
@@ -45,6 +46,7 @@
               <button class="navigation__list--item" type="button">
                 Company
               </button>
+              <span class="btn--arrow"></span>
 
               <div class="products visually-hidden">
                 <ul class="products__list">
@@ -59,6 +61,7 @@
               <button class="navigation__list--item" type="button">
                 Contact
               </button>
+              <span class="btn--arrow"></span>
 
               <div class="products visually-hidden">
                 <ul class="products__list">
@@ -69,14 +72,15 @@
               </div>
             </li>
           </ul>
+
           <hr class="navigation__menu--separator" />
 
-          <ul>
-            <li>Login</li>
+          <div class="navigation__second--menu">
+            <a class="login" href="#">Login</a>
             <button type="button" class="btn btn--signup btn--highlighted">
               Sign Up
             </button>
-          </ul>
+          </div>
         </nav>
 
         <div class="menuHandler">
@@ -220,7 +224,7 @@
     <footer class="footer">
       <div class="footer__container container">
         <nav>
-          <div class="logo" role="logo">
+          <div class="logo">
             <a href="#">
               <svg width="101" height="40" xmlns="http://www.w3.org/2000/svg">
                 <path

@@ -521,6 +521,11 @@ h4 {
   transition: opacity 300ms ease-in-out;
 }
 
+.animationRotate {
+  transform: rotate(180deg);
+  transition: transform 300ms ease-in-out;
+}
+
 .header {
   background-image: url("../../images/bg-pattern-intro.svg"), linear-gradient(#ff3d54, #ff8f70);
   min-height: 500px;
@@ -549,16 +554,17 @@ h4 {
   top: 7rem;
   text-align: center;
 }
-.header--container .navigation__list--item::after {
-  content: url("./images/icon-arrow-dark.svg");
-  width: 10px;
-}
-.header--container .navigation li {
+.header--container .navigation li,
+.header--container .navigation a {
   color: #25252d;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   cursor: pointer;
   padding: 1rem 0 0.5rem;
+}
+.header--container .navigation__second--menu .login {
+  display: block;
+  margin-bottom: 1rem;
 }
 .header--container .navigation .products {
   background-color: rgba(200, 200, 203, 0.2);
@@ -639,6 +645,15 @@ h4 {
   }
   .header--container .menuHandler {
     display: none;
+  }
+  .header--container .navigation__second--menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .header--container .navigation__second--menu .login {
+    color: white;
+    margin-right: 2rem;
+    margin-bottom: initial;
   }
   .header--container .navigation .products {
     position: absolute;
@@ -750,6 +765,13 @@ button {
   background-image: linear-gradient(to right, #ff8f70, #ff3d54);
   color: white;
 }
+.btn--arrow {
+  background-image: url("./images/icon-arrow-dark.svg");
+  display: inline-block;
+  width: 10px;
+  height: 7px;
+  transition: transform 300ms ease-in-out;
+}
 
 @media (min-width: 1440px) {
   .btn--signup {
@@ -764,6 +786,12 @@ button {
     background-color: #ff7a85;
     border: none;
     color: white;
+  }
+  .btn--arrow {
+    background-image: url("./images/icon-arrow-light.svg");
+    display: inline-block;
+    width: 10px;
+    height: 7px;
   }
 }
 main {

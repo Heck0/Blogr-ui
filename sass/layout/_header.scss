@@ -31,17 +31,20 @@
       top: 7rem;
       text-align: center;
 
-      &__list--item::after {
-        content: url("./images/icon-arrow-dark.svg");
-        width: 10px;
-      }
-
-      li {
+      li,
+      a {
         color: $veryDarkBlackBlue;
         font-family: "Ubuntu", sans-serif;
         font-weight: 500;
         cursor: pointer;
         padding: 1rem 0 0.5rem;
+      }
+
+      &__second--menu {
+        .login {
+          display: block;
+          margin-bottom: 1rem;
+        }
       }
 
       .products {
@@ -145,6 +148,16 @@
       }
 
       .navigation {
+        &__second--menu {
+          display: flex;
+          flex-direction: row;
+
+          .login {
+            color: $white;
+            margin-right: 2rem;
+            margin-bottom: initial;
+          }
+        }
         .products {
           position: absolute;
           background-color: $white;
