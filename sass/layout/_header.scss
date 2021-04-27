@@ -1,0 +1,180 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  background-image: url("../../images/bg-pattern-intro.svg"),
+    linear-gradient($gradientLightRed, $gradientVeryLightRed);
+  min-height: 500px;
+  border-bottom-left-radius: 5rem;
+  margin-bottom: 8rem;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 180%;
+  position: relative;
+
+  &--container {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+
+    .navigation {
+      display: none;
+      border-radius: 0.4rem;
+      padding: 1rem 0;
+      box-shadow: 0 0 25px -3px $veryDarkBlackBlue;
+      position: absolute;
+      width: calc(100% - 60px);
+      background-color: $white;
+      top: 7rem;
+      text-align: center;
+
+      &__list--item::after {
+        content: url("./images/icon-arrow-dark.svg");
+        width: 10px;
+      }
+
+      li {
+        color: $veryDarkBlackBlue;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 1rem 0 0.5rem;
+      }
+
+      .products {
+        background-color: rgba($grayishBlue, 0.2);
+        width: 80%;
+        margin: 1rem auto;
+
+        &__item a {
+          color: $veryDarkGrayishBlue;
+          font-family: "Ubuntu", sans-serif;
+          font-weight: 500;
+        }
+      }
+      &__menu--separator {
+        width: 80%;
+        border-color: rgba($veryDarkGrayishBlue, 0.2);
+
+        & + ul > li {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    & .hamburger {
+      cursor: pointer;
+    }
+  }
+
+  .hero {
+    text-align: center;
+
+    &__subtitle {
+      color: $white;
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      margin-bottom: 3rem;
+    }
+
+    &__buttons {
+      display: flex;
+      flex: 1 0 40%;
+      justify-content: center;
+
+      & > button {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .hamburger {
+    &--close {
+      display: block;
+    }
+    &--open {
+      display: none;
+    }
+  }
+}
+
+@include desktop {
+  .header {
+    padding-top: 2rem;
+
+    &--container {
+      .navigation {
+        border-radius: initial;
+        padding: initial;
+        box-shadow: none;
+        background-color: inherit;
+        position: static;
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+
+        & ul li {
+          position: relative;
+          display: inline-block;
+          font-weight: 500;
+          color: $white;
+
+          &,
+          & + button {
+            margin-left: 3rem;
+          }
+          path {
+            stroke: $white;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        &__menu--separator {
+          display: none;
+        }
+      }
+
+      .menuHandler {
+        display: none;
+      }
+
+      .navigation {
+        .products {
+          position: absolute;
+          background-color: $white;
+          width: 200px;
+          top: 4rem;
+          left: -4rem;
+          border-radius: 0.5rem;
+          box-shadow: 0 0 20px -4px $veryDarkBlackBlue;
+
+          li {
+            margin: 0.5rem 2rem;
+          }
+          a {
+            color: $grayishBlue;
+
+            &:hover {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
+    .hero {
+      &__title {
+        margin-bottom: 0;
+      }
+      &__subtitle {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

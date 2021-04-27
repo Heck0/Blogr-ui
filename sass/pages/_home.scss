@@ -1,0 +1,126 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+main {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .phone {
+    background-image: url("../../images/bg-pattern-circles.svg"),
+      linear-gradient(
+        $gradientVeryDarkGrayBlue,
+        $gradientVeryDarkDesaturatedBlue
+      );
+    background-repeat: no-repeat;
+    background-position: 50% -220px;
+    background-size: contain;
+    margin-top: 250px;
+    padding-bottom: 100px;
+    border-top-right-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+
+    &--background {
+      height: 400px;
+      margin-top: -180px;
+    }
+
+    &__text {
+      color: $white;
+    }
+  }
+  .desktop {
+    &__image {
+      width: 100%;
+    }
+  }
+}
+
+@include desktop {
+  main {
+    text-align: inherit;
+
+    .first--section {
+      position: relative;
+
+      h2 {
+        margin-bottom: 4rem;
+      }
+
+      &__container {
+        text-align: center;
+        height: 600px;
+      }
+
+      &__content {
+        height: 100%;
+        width: 50%;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .illustrator--background {
+        position: absolute;
+        right: -28%;
+        top: -3rem;
+      }
+    }
+
+    .phone {
+      position: relative;
+      padding: 150px 0;
+      margin-bottom: 10rem;
+      background-size: inherit;
+      background-position: -50%;
+
+      &--background {
+        position: absolute;
+        top: 8rem;
+        left: 10rem;
+        height: 700px;
+      }
+
+      &__content {
+        width: 50%;
+        margin-right: 0;
+      }
+    }
+
+    .desktop {
+      position: relative;
+
+      &__image {
+        width: inherit;
+        position: absolute;
+        left: -13rem;
+        top: -4rem;
+      }
+
+      &__content {
+        min-height: 700px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        justify-content: center;
+        & > div {
+          width: 50%;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        left: -33rem;
+        top: -6rem;
+        display: block;
+        content: "";
+        height: 800px;
+        width: 100%;
+      }
+    }
+  }
+}

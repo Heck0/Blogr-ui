@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+//Primary Colors
+$lightRed: hsl(356, 100%, 66%);
+$veryLightRed: hsl(355, 100%, 74%);
+$veryDarkBlue: hsl(208, 49%, 24%);
+
+// Neutral Colors
+$white: hsl(0, 0%, 100%);
+$grayishBlue: hsl(240, 2%, 79%);
+$veryDarkGrayishBlue: hsl(207, 13%, 34%);
+$veryDarkBlackBlue: hsl(240, 10%, 16%);
+
+// Gradient
+$gradientVeryLightRed: hsl(13, 100%, 72%);
+$gradientLightRed: hsl(353, 100%, 62%);
+$gradientVeryDarkGrayBlue: hsl(237, 17%, 21%);
+$gradientVeryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+
+// Max-width
+$maxWidth: 1440px;
+
+// Images
+$editorMobile: "../images/illustration-editor-mobile.svg";
+$editorDesktop: "../images/illustration-editor-desktop.svg";
+$laptopMobile: "../images/illustration-laptop-mobile.svg";
+$laptopDesktop: "../images/illustration-laptop-desktop.svg";
+$phones: "../images/illustration-phones.svg";
